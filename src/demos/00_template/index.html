@@ -14,26 +14,25 @@
 
     <script type="text/babel">
 
-    var Component = React.createClass({
+    var Movie = React.createClass({
     render: function () {
        return (
         <div>
-             <h2>It's my fisrt component!</h2>
-             <p>I am some sample text</p>
+             <h1>{this.props.title}</h1>
+             <h2>{this.props.genre}</h2>
         </div>
-      )
+      );
     }
-    })
+    });
 
 
-        ReactDOM.render(<div>
-            <Component/>
-            <Component/>
-            <Component/>
+        ReactDOM.render(
+        <div>
+             <Movie title="avatar" genre="action"/>
+             <Movie title="the noteBook" genre="romance"/>
+              <Movie title="Captain America" genre="action"/>
         </div>
-            ,
-            document.getElementById('container')
-        );
+            , document.getElementById('container'));
     </script>
 
 </body>
