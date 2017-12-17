@@ -16,13 +16,22 @@
 
     var Component = React.createClass({
     render: function () {
-       return (<h2>It's my fisrt component!</h2>)
+       return (
+        <div>
+             <h2>It's my fisrt component!</h2>
+             <p>I am some sample text</p>
+        </div>
+      )
     }
     })
 
 
-        ReactDOM.render(
-            <Component/>,
+        ReactDOM.render(<div>
+            <Component/>
+            <Component/>
+            <Component/>
+        </div>
+            ,
             document.getElementById('container')
         );
     </script>
